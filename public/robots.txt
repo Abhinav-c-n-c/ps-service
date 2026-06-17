@@ -1,0 +1,16 @@
+# robots.txt — PS Services (https://psservices.in)
+# Generated: 2026-06-18
+
+User-agent: *
+Allow: /
+
+# Block internal/utility paths that should not be indexed
+Disallow: /assets/
+Disallow: /*.json$
+
+# Allow Google Image Bot to index images for rich results
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# Sitemap location
+Sitemap: https://psservices.in/sitemap.xml
