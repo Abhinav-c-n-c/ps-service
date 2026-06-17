@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 35, filter: 'blur(3px)' },
@@ -24,7 +25,37 @@ const staggerContainer = {
 const About = () => {
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="About Us – Point To Source Services | Staffing Agency Since 2022"
+        description="Learn about PS Services – founded in 2022, we are a premier IT & Non-IT recruitment consultancy in Delhi. Our team delivers fully vetted talent to enterprises and startups across India."
+        keywords="about PS Services, recruitment agency Delhi, IT headhunting India, staffing consultancy Delhi, Point To Source Services history, talent acquisition firm India"
+        canonical="/about"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            url: 'https://psservices.in/about',
+            name: 'About PS Services',
+            description: 'PS Services is a premier IT & Non-IT recruitment consultancy in Delhi, India, founded in 2022.',
+            breadcrumb: {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+                { '@type': 'ListItem', position: 2, name: 'About', item: 'https://psservices.in/about' }
+              ]
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Point To Source Services',
+            url: 'https://psservices.in',
+            foundingDate: '2022',
+            numberOfEmployees: { '@type': 'QuantitativeValue', value: 10 },
+            sameAs: ['https://www.linkedin.com/company/point-to-source-services/']
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{
