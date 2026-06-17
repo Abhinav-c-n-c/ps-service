@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const teamMembers = [
   {
@@ -82,7 +83,38 @@ const staggerContainer = {
 const Team = () => {
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="Our HR & Recruitment Consultants – Meet the PS Services Team"
+        description="Meet the PS Services team: Pradeep Kumar (Founder & CEO) and Shweta Kumari (Sr HR Manager). Our expert recruiters have 10+ years of combined experience in IT and non-IT talent acquisition across India."
+        keywords="PS Services team, recruitment consultants India, HR manager Delhi, staffing agency founders, Pradeep Kumar recruiter, talent acquisition team India"
+        canonical="/team"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Pradeep Kumar',
+            jobTitle: 'Founder & CEO',
+            worksFor: { '@type': 'Organization', name: 'Point To Source Services', url: 'https://psservices.in' },
+            sameAs: ['https://www.linkedin.com/in/pradeep-kumar-8661111a3']
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Shweta Kumari',
+            jobTitle: 'Senior HR Manager',
+            worksFor: { '@type': 'Organization', name: 'Point To Source Services', url: 'https://psservices.in' },
+            sameAs: ['https://www.linkedin.com/in/shweta-kumari-471b603b8']
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Team', item: 'https://psservices.in/team' }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

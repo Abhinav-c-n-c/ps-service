@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const brands = [
   { name: "Client 1", logo: "/assets/clients_processed/client_1.png" },
@@ -45,7 +46,29 @@ const staggerContainer = {
 const OurClients = () => {
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="Our Clients & Sourcing Partners – Trusted by India's Leading Enterprises"
+        description="PS Services partners with 18+ corporate clients including IT firms, banks, and education institutions across India. Read client testimonials from HR managers and talent leads who scaled their teams with us."
+        keywords="PS Services clients, recruitment agency partners India, corporate staffing clients, IT company hiring partners, client testimonials, talent acquisition reviews India"
+        canonical="/our-clients"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Our Clients & Partners – PS Services',
+            url: 'https://psservices.in/our-clients',
+            description: 'Trusted sourcing partners and client reviews for Point To Source Services – premier staffing agency in Delhi.',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Our Clients', item: 'https://psservices.in/our-clients' }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

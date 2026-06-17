@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const projectsData = [
   {
@@ -90,7 +91,42 @@ const staggerContainer = {
 const OurProject = () => {
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="Recruitment Case Studies & Sourcing Campaigns – PS Services Projects"
+        description="Explore PS Services' successful recruitment campaigns: executive CEO placements, SaaS engineering units, healthcare staffing, logistics teams, and academic leadership hiring across India."
+        keywords="recruitment case studies India, staffing projects, executive placement, IT hiring campaign, healthcare staffing, logistics team building, education sector recruitment India"
+        canonical="/our-project"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Recruitment & Sourcing Campaigns – PS Services',
+            url: 'https://psservices.in/our-project',
+            description: 'Portfolio of successful recruitment campaigns by PS Services across IT, banking, healthcare, and logistics sectors in India.'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Sourcing Campaign Portfolio',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'National Bank Chief Executive Officer Placement' },
+              { '@type': 'ListItem', position: 2, name: 'SaaS Scale-up Frontend & Backend Engineering Unit' },
+              { '@type': 'ListItem', position: 3, name: 'Regional Operations Director & Factory Heads Hiring' },
+              { '@type': 'ListItem', position: 4, name: 'Logistics Coordination Unit for Global Travel Domain' },
+              { '@type': 'ListItem', position: 5, name: 'Administrative Registrar & Deans for Academic Network' },
+              { '@type': 'ListItem', position: 6, name: 'Sourcing Regional Supply Chain & Operations Managers' }
+            ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Our Projects', item: 'https://psservices.in/our-project' }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const teamDatabase = {
   "pradeep kumar": {
@@ -124,7 +125,34 @@ const TeamDetails = () => {
 
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title={`${member.name} – ${member.position} | PS Services Consultant`}
+        description={`${member.name} is a ${member.position} at PS Services, specialising in ${member.specialty}. ${member.description ? member.description.slice(0, 100) + '...' : 'Expert staffing consultant at PS Services, Delhi.'}`}
+        keywords={`${member.name}, ${member.position}, PS Services consultant, recruitment expert Delhi, HR specialist India, staffing advisor`}
+        canonical="/team-details"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: member.name,
+            jobTitle: member.position,
+            description: member.description,
+            email: member.email,
+            telephone: member.phone,
+            image: member.image,
+            worksFor: { '@type': 'Organization', name: 'Point To Source Services', url: 'https://psservices.in' }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Team', item: 'https://psservices.in/team' },
+              { '@type': 'ListItem', position: 3, name: member.name, item: `https://psservices.in/team-details?name=${encodeURIComponent(member.name)}` }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

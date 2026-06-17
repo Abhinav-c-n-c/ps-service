@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import SEO from '../components/SEO';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 35, filter: 'blur(3px)' },
@@ -68,7 +69,64 @@ const Services = () => {
 
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="IT & Non-IT Recruitment Services – Executive Search & Contract Staffing"
+        description="PS Services offers IT recruitment, executive search, non-IT enterprise placements, and contract staffing across India. Get pre-vetted tech engineers, finance leads, and C-suite professionals in 3–5 days."
+        keywords="IT recruitment services India, executive search Delhi, contract staffing, non-IT placement, software engineer hiring, DevOps staffing, HR outsourcing, talent acquisition services"
+        canonical="/services"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Recruitment & Staffing',
+            provider: {
+              '@type': 'Organization',
+              name: 'Point To Source Services',
+              url: 'https://psservices.in'
+            },
+            areaServed: { '@type': 'Country', name: 'India' },
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Staffing Services',
+              itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Executive Search & Headhunting' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IT & Software Engineering Sourcing' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Non-IT & Enterprise Placements' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Contract Staffing & Agile Scaling' } }
+              ]
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What criteria should I prepare for a sourcing campaign?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Share target job profiles, experience ranges, key deliverables, location preferences, budget bands, and onboarding timelines so our consultants can build a precise candidate profile map on day one.' }
+              },
+              {
+                '@type': 'Question',
+                name: 'How does PS Services maintain candidate quality?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Every candidate undergoes multi-layered screening: technical tests, cultural-fit audits, and background reference checks before client interviews. This boosts offer-acceptance rates and long-term retention.' }
+              },
+              {
+                '@type': 'Question',
+                name: 'What is your standard turnaround time?',
+                acceptedAnswer: { '@type': 'Answer', text: 'For mid-level roles we deliver an initial shortlist within 3–5 business days. We support contract, contract-to-hire, and permanent placements with 90-day replacement guarantees.' }
+              }
+            ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://psservices.in/services' }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

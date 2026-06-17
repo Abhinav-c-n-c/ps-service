@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 35, filter: 'blur(3px)' },
@@ -24,7 +25,56 @@ const staggerContainer = {
 const Contact = () => {
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="Contact PS Services – Reach Our Sourcing Desk in Delhi"
+        description="Contact Point To Source Services for IT recruitment, executive search, or staffing inquiries. Call +91 88505 68104 or email thepsservices@gmail.com. Office located in Uttam Nagar, West Delhi – 110059."
+        keywords="contact PS Services, staffing agency contact Delhi, recruitment inquiry India, HR consultancy phone, hire recruiters India, call staffing agency"
+        canonical="/contact"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact PS Services',
+            url: 'https://psservices.in/contact',
+            description: 'Reach the PS Services sourcing desk for IT recruitment, executive search, and staffing campaigns across India.'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Point To Source Services',
+            telephone: '+91-88505-68104',
+            email: 'thepsservices@gmail.com',
+            url: 'https://psservices.in',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'H No - 6/2, Sethi Enclave, Mohan Garden, Street No - 2',
+              addressLocality: 'Uttam Nagar, West Delhi',
+              addressRegion: 'DL',
+              postalCode: '110059',
+              addressCountry: 'IN'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 28.621773,
+              longitude: 77.038101
+            },
+            openingHoursSpecification: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+              opens: '08:00',
+              closes: '18:00'
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://psservices.in' },
+              { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://psservices.in/contact' }
+            ]
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{
