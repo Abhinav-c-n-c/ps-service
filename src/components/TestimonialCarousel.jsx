@@ -90,7 +90,7 @@ const TestimonialCarousel = () => {
                     src={item.image} 
                     className="img-fluid w-100 h-100" 
                     alt={item.name} 
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', objectPosition: 'top center' }}
                     onError={(e) => {
                       e.target.src = `https://api.dicebear.com/7.x/initials/svg?seed=${item.name}`;
                     }}
