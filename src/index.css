@@ -361,39 +361,44 @@ header.header-main-wrap.on-home:not(.scrolled) .menu-bar-icon {
   color: #ffffff !important;
 }
 
-/* Subpages unscrolled header style */
+/* Subpages unscrolled header style — same transparent overlay as home */
 header.header-main-wrap.on-subpage:not(.scrolled) {
-  position: relative !important;
-  background-color: #ffffff !important;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+header.header-main-wrap.on-subpage:not(.scrolled) .brand-logo-img {
+  filter: brightness(0) invert(1);
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .main-menu-nav ul li a {
-  color: #334155 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .main-menu-nav ul li a::after {
-  background-color: #2563eb !important;
+  background-color: #ffffff !important;
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .main-menu-nav ul li a:hover,
 header.header-main-wrap.on-subpage:not(.scrolled) .main-menu-nav ul li.active a {
-  color: #2563eb !important;
+  color: #ffffff !important;
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .header-btn-custom {
   background: transparent !important;
-  color: #2563eb !important;
-  border: 1.5px solid #2563eb !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: none !important;
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .header-btn-custom:hover {
-  background: #2563eb !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #0b1a30 !important;
+  border-color: #ffffff !important;
 }
 
 header.header-main-wrap.on-subpage:not(.scrolled) .menu-bar-icon {
-  color: #334155 !important;
+  color: #ffffff !important;
 }
 
 /* SCROLLED HEADER STATE (Unified for both home and subpage) */
@@ -445,9 +450,8 @@ header.header-main-wrap.scrolled .menu-bar-icon {
   color: #334155 !important;
 }
 
-/* Make logo dark on light backgrounds */
-header.header-main-wrap.scrolled .brand-logo-img,
-header.header-main-wrap.on-subpage .brand-logo-img {
+/* Make logo dark on light backgrounds (scrolled state only) */
+header.header-main-wrap.scrolled .brand-logo-img {
   filter: none !important;
   opacity: 1 !important;
 }

@@ -109,11 +109,8 @@ const OurProject = () => {
                 variants={staggerContainer}
                 initial="initial"
                 animate="animate"
-                className="banner-content"
+                className="banner-content mt-5"
               >
-                <motion.span variants={fadeInUp} className="sub-title hero-sub-title mb-4">
-                  Portfolio
-                </motion.span>
                 
                 <motion.h1 
                   variants={fadeInUp} 
