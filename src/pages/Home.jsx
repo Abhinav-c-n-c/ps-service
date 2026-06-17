@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import ClientMarquee from '../components/ClientMarquee';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40, filter: 'blur(4px)' },
@@ -191,8 +192,82 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section (Image 1 layout inspiration) */}
-      {/* Hero Section (Eleven Degrees layout inspiration) */}
+      <SEO
+        title="Leading IT & Non-IT Staffing Agency in Delhi"
+        description="PS Services (Point To Source Services) is Delhi's premier staffing & recruitment agency. We deliver pre-vetted IT engineers, finance leaders, and executive professionals to startups and enterprises across India."
+        keywords="staffing agency Delhi, IT recruitment India, tech hiring, executive search, talent acquisition, non-IT placement, HR consultancy, contract staffing India"
+        canonical="/"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'PS Services',
+            url: 'https://psservices.in',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://psservices.in/?q={search_term_string}',
+              'query-input': 'required name=search_term_string'
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Point To Source Services',
+            alternateName: 'PS Services',
+            url: 'https://psservices.in',
+            logo: 'https://psservices.in/assets/img/logo/logo-3.png',
+            foundingDate: '2022',
+            description: 'Premier recruitment & staffing agency in Delhi, India specialising in IT and Non-IT talent acquisition.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'H No - 6/2, Sethi Enclave, Mohan Garden, Street No - 2',
+              addressLocality: 'Uttam Nagar, West Delhi',
+              addressRegion: 'Delhi',
+              postalCode: '110059',
+              addressCountry: 'IN'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+91-88505-68104',
+              contactType: 'customer service',
+              availableLanguage: ['English', 'Hindi']
+            },
+            sameAs: [
+              'https://www.linkedin.com/company/point-to-source-services/'
+            ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': 'https://psservices.in',
+            name: 'Point To Source Services',
+            image: 'https://psservices.in/assets/img/logo/logo-3.png',
+            telephone: '+91-88505-68104',
+            email: 'thepsservices@gmail.com',
+            url: 'https://psservices.in',
+            priceRange: '₹₹',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'H No - 6/2, Sethi Enclave, Mohan Garden, Street No - 2',
+              addressLocality: 'Uttam Nagar, West Delhi',
+              addressRegion: 'DL',
+              postalCode: '110059',
+              addressCountry: 'IN'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 28.621773,
+              longitude: 77.038101
+            },
+            openingHoursSpecification: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+              opens: '08:00',
+              closes: '18:00'
+            }
+          }
+        ]}
+      />
       <section 
         className="hero-banner-wrap pt-180 pb-120 position-relative overflow-hidden d-flex align-items-center"
         style={{

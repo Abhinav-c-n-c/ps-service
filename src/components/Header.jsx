@@ -52,7 +52,7 @@ const Header = ({ onMobileNavOpen }) => {
                 <a href="#" className="social-icon-link"><i className="fab fa-facebook-f"></i></a>
                 <a href="#" className="social-icon-link"><i className="fab fa-twitter"></i></a>
                 <a href="#" className="social-icon-link"><i className="fab fa-instagram"></i></a>
-                <a href="#" className="social-icon-link"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/company/point-to-source-services/" target="_blank" rel="noopener noreferrer" className="social-icon-link"><i className="fab fa-linkedin-in"></i></a>
               </div>
             </div>
 
