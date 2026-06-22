@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Shweta Kumari",
     position: "Sr HR Manager",
-    image: "/assets/img/team/shweta.png",
+    image: "https://res.cloudinary.com/dybv5ghlb/image/upload/v1782155675/ChatGPT_Image_Jun_22_2026_03_14_43_PM_k1vphl.png",
     linkedin: "https://www.linkedin.com/in/shweta-kumari-471b603b8",
     accentClass: "team-green-accent",
     linkedinBg: "#10b981",
